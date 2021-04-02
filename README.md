@@ -2,13 +2,22 @@
 
 - doctest: Testing using doctest. :page_with_curl:
     - Def tests in algoritmos.py
-    - usage python doctest/algoritmos.py
+    - usage python doctest_t/algoritmos.py
     - others:
-        - cd doctest :black_nib:
-            - python -m doctest doctest/test.txt
+        - cd doctest_t :black_nib:
+            - python -m doctest test.txt
 - pyTest: Testing using pytest. :snake:
     - function on pytestTesting
     - test.py define tests.
-    - pytest pyTest/test.py
+    - pytest pyTest_t/test.py
+
+- world_unittest: Using unittest.
+    - cd world_unitest
+    - python test_world.py
+    - coverage run test_world.py
+    - coverage report worldModel.py
 
 
+- Requeriments:
+    - pip install pytest
+    - pip install coverage
