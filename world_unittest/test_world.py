@@ -44,7 +44,7 @@ class TestWorldCreation(unittest.TestCase):
         self.assertRegex(self.world.creations[0].uid, "XID")
 
     def test_failCreation(self):
-        total = len(self.world.creations)
+        total = self.world.getTotalCreations()
         print("TOTAL: "+str(total))
         if total < 11:
             self.fail("No se han creado todos")
@@ -63,6 +63,15 @@ class TestWorldCreation(unittest.TestCase):
     def test_showall(self):
         for c in self.world.creations:
             print(c)
+
+    def test_gettotalpower(self):
+        if self.world.getTotalPower()<500:
+            self.fail(f"Poco poder de respuesta {self.world.getTotalPower()}")
+    
+    def test_removeBeatrix(self):
+        self.world.remove_creation(self.beatrix)
+        with self.assertRaises(NotExistItemCreation):
+            self.world.get_creation(self.beatrix)
 
 if __name__ == '__main__':
     unittest.main()

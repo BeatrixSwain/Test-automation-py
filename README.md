@@ -16,8 +16,14 @@
     - python test_world.py
     - coverage run test_world.py
     - coverage report worldModel.py
+    - reports:
+        - coverage run test_world.py
+        - coverage report -m worldModel.py
+        - coverage html worldModel.py
 
 
 - Requeriments:
     - pip install pytest
     - pip install coverage
+
+02.04.2021 - v.1.0.1
