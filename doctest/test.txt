@@ -1,0 +1,15 @@
+La suma de 2 + 2 es igual a 4
+>>> 2+2
+4
+
+>>> def suma(*args):
+...    return sum(args)
+
+La suma de 10 + 20 + 30 debe de ser 60
+>>> suma(10,20,30)
+60
+
+>>> from algoritmos import fibonnaci
+>>> fibonnaci(20)
+6765
+
